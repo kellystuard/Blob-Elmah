@@ -112,12 +112,6 @@ namespace Elmah.Azure
             return blobContainer;
         }
 
-        private string NewLogId()
-        {
-            return (DateTime.MaxValue.Ticks - DateTime.UtcNow.Ticks).ToString("d19")
-                + '-' + Guid.NewGuid().ToString("n");
-        }
-
         private readonly string _connectionString;
     }
 }
